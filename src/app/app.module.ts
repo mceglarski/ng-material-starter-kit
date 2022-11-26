@@ -19,6 +19,9 @@ import { PublicHolidaysService } from './services/public-holidays.service';
 import { MatSelectModule } from '@angular/material/select';
 import { CheckboxCategoriesComponent } from './components/checkbox-categories/checkbox-categories.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CryptoCurrenciesComponent,
     PublicHolidaysComponent,
     CheckboxCategoriesComponent,
+    CategoriesMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatChipsModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [
     ProductsService,

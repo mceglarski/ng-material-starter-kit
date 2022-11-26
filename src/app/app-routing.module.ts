@@ -5,6 +5,7 @@ import { CategoriesListComponent } from './components/categories-list/categories
 import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
 import { CheckboxCategoriesComponent } from './components/checkbox-categories/checkbox-categories.component';
+import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,10 @@ import { CheckboxCategoriesComponent } from './components/checkbox-categories/ch
       {
         path: 'checkbox-categories',
         component: CheckboxCategoriesComponent,
+      },
+      {
+        path: 'categories-menu',
+        component: CategoriesMenuComponent,
       },
     ]),
   ],

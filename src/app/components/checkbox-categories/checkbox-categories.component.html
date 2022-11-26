@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Categories list</mat-card-title>
+  <mat-card-content>
+    <section role="categoryCheckbox">
+      <mat-checkbox
+        class="checkbox-categories-element"
+        role="categoryCheckboxItem"
+        *ngFor="let category of categoryList$ | async"
+      >
+        {{ category }}
+      </mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>

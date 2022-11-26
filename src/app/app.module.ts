@@ -14,6 +14,9 @@ import { CategoriesService } from './services/categories.service';
 import { CryptoCurrenciesService } from './services/crypto-currencies.service';
 import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
+import { PublicHolidaysService } from './services/public-holidays.service';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { MatChipsModule } from '@angular/material/chips';
     ProductListComponent,
     CategoriesListComponent,
     CryptoCurrenciesComponent,
+    PublicHolidaysComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,8 +34,14 @@ import { MatChipsModule } from '@angular/material/chips';
     MatCardModule,
     MatListModule,
     MatChipsModule,
+    MatSelectModule,
   ],
-  providers: [ProductsService, CategoriesService, CryptoCurrenciesService],
+  providers: [
+    ProductsService,
+    CategoriesService,
+    CryptoCurrenciesService,
+    PublicHolidaysService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

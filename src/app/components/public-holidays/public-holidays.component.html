@@ -1,0 +1,10 @@
+<mat-form-field appearance="fill">
+  <mat-label>Choose an option</mat-label>
+  <mat-select>
+    <mat-option
+      *ngFor="let publicHoliday of publicHolidaysList$ | async"
+      [value]="publicHoliday.name"
+      >{{ publicHoliday.name }}</mat-option
+    >
+  </mat-select>
+</mat-form-field>

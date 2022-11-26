@@ -10,9 +10,18 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
+import { CategoriesService } from './services/categories.service';
+import { CryptoCurrenciesService } from './services/crypto-currencies.service';
+import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, CategoriesListComponent],
+  declarations: [
+    AppComponent,
+    ProductListComponent,
+    CategoriesListComponent,
+    CryptoCurrenciesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,8 +29,9 @@ import { CategoriesListComponent } from './components/categories-list/categories
     HttpClientModule,
     MatCardModule,
     MatListModule,
+    MatChipsModule,
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, CategoriesService, CryptoCurrenciesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

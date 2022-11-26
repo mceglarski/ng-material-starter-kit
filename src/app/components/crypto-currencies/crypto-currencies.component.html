@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>Crypto chips</mat-card-title>
+  <mat-card-content>
+    <mat-chip-list role="cryptoList">
+      <mat-chip role="cryptoListItem" *ngFor="let crypto of cryptoList$ | async">
+        {{ crypto.symbol }}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

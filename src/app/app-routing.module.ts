@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { CategoriesListComponent } from './components/categories-list/categories-list.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { CategoriesListComponent } from './components/product/categories-list/categories-list.component';
 import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
-import { CheckboxCategoriesComponent } from './components/checkbox-categories/checkbox-categories.component';
-import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
-import { ProductSearchComponent } from './components/product-search/product-search.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CheckboxCategoriesComponent } from './components/product/checkbox-categories/checkbox-categories.component';
+import { CategoriesMenuComponent } from './components/product/categories-menu/categories-menu.component';
+import { ProductSearchComponent } from './components/product/product-search/product-search.component';
+import { ProductFormComponent } from './components/product/product-form/product-form.component';
+import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
 
 @NgModule({
   imports: [
@@ -43,6 +44,10 @@ import { ProductFormComponent } from './components/product-form/product-form.com
       {
         path: 'create-product',
         component: ProductFormComponent,
+      },
+      {
+        path: 'create-employee',
+        component: EmployeeFormComponent,
       },
     ]),
   ],

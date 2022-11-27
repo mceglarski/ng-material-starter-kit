@@ -30,8 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
 import { EmployeeService } from './services/employee.service';
-import { LoginComponent } from './components/login/login.component';
-import { LoginService } from './services/login.service';
+import { LoginComponent } from './components/user/login/login.component';
+import { RegisterFormComponent } from './components/user/register-form/register-form.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginService } from './services/login.service';
     ProductFormComponent,
     EmployeeFormComponent,
     LoginComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,7 @@ import { LoginService } from './services/login.service';
     CryptoCurrenciesService,
     PublicHolidaysService,
     EmployeeService,
-    LoginService,
+    UserService,
   ],
   bootstrap: [AppComponent],
 })

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +13,10 @@ export class LoginComponent {
     password: new FormControl(),
   });
 
-  constructor(private _loginService: LoginService) {}
+  constructor(private _userService: UserService) {}
 
   public onLoginFormSubmitted(loginForm: FormGroup): void {
-    this._loginService
+    this._userService
       .login({
         username: loginForm.get('username')?.value,
         password: loginForm.get('password')?.value,

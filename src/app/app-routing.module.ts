@@ -9,7 +9,8 @@ import { CategoriesMenuComponent } from './components/product/categories-menu/ca
 import { ProductSearchComponent } from './components/product/product-search/product-search.component';
 import { ProductFormComponent } from './components/product/product-form/product-form.component';
 import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/user/login/login.component';
+import {RegisterFormComponent} from "./components/user/register-form/register-form.component";
 
 @NgModule({
   imports: [
@@ -53,6 +54,10 @@ import { LoginComponent } from './components/login/login.component';
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterFormComponent,
       },
     ]),
   ],

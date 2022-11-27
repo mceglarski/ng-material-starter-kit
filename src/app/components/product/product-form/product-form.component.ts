@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { CategoriesService } from '../../../services/categories.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-form',
@@ -16,7 +18,13 @@ export class ProductFormComponent {
     image: new FormControl(),
   });
 
-  constructor(private _productService: ProductsService) {}
+  public categoriesList$: Observable<string[]> =
+    this._categoriesService.getAllCategories();
+
+  constructor(
+    private _productService: ProductsService,
+    private _categoriesService: CategoriesService
+  ) {}
 
   public onProductFormSubmitted(productForm: FormGroup): void {
     this._productService

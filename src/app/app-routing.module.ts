@@ -7,6 +7,7 @@ import { PublicHolidaysComponent } from './components/public-holidays/public-hol
 import { CheckboxCategoriesComponent } from './components/checkbox-categories/checkbox-categories.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { ProductSearchComponent } from './components/product-search/product-search.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,10 @@ import { ProductSearchComponent } from './components/product-search/product-sear
       {
         path: 'product-search',
         component: ProductSearchComponent,
+      },
+      {
+        path: 'create-product',
+        component: ProductFormComponent,
       },
     ]),
   ],

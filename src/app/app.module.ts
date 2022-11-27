@@ -24,6 +24,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { ProductSearchComponent } from './components/product-search/product-search.component';
 import { MatTableModule } from '@angular/material/table';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,11 +39,15 @@ import { MatTableModule } from '@angular/material/table';
     CheckboxCategoriesComponent,
     CategoriesMenuComponent,
     ProductSearchComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
     HttpClientModule,
     MatCardModule,
     MatListModule,

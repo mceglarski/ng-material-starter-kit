@@ -21,7 +21,9 @@ import { CheckboxCategoriesComponent } from './components/checkbox-categories/ch
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatButtonModule} from "@angular/material/button";
+import { MatButtonModule } from '@angular/material/button';
+import { ProductSearchComponent } from './components/product-search/product-search.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import {MatButtonModule} from "@angular/material/button";
     PublicHolidaysComponent,
     CheckboxCategoriesComponent,
     CategoriesMenuComponent,
+    ProductSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import {MatButtonModule} from "@angular/material/button";
     MatSelectModule,
     MatCheckboxModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
   ],
   providers: [
     ProductsService,

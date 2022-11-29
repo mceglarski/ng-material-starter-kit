@@ -1,7 +1,11 @@
 <div class="container-fluid">
-  <div *ngIf="(productDetails$ | async) as detail">
-    <span>{{detail.title}}</span>
-    <br>
-    <span>{{detail.description}}</span>
-  </div>
+  <mat-card *ngIf="productDetails$ | async as detail">
+    <mat-card-header class="product-detail-header">
+      <mat-card-title>Product details</mat-card-title>
+      <mat-card-subtitle>{{ detail.title }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ detail.description }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>

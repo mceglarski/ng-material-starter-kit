@@ -10,7 +10,8 @@ import { ProductSearchComponent } from './components/product/product-search/prod
 import { ProductFormComponent } from './components/product/product-form/product-form.component';
 import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
 import { LoginComponent } from './components/user/login/login.component';
-import {RegisterFormComponent} from "./components/user/register-form/register-form.component";
+import { RegisterFormComponent } from './components/user/register-form/register-form.component';
+import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,10 @@ import {RegisterFormComponent} from "./components/user/register-form/register-fo
       {
         path: 'products',
         component: ProductListComponent,
+      },
+      {
+        path: 'product/:id',
+        component: ProductDetailComponent,
       },
       {
         path: 'categories',

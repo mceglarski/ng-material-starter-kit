@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <div *ngIf="(productDetails$ | async) as detail">
+    <span>{{detail.title}}</span>
+    <br>
+    <span>{{detail.description}}</span>
+  </div>
+</div>

@@ -7,6 +7,12 @@ import { ProductModel } from '../models/product.model';
 export class ProductsService {
   constructor(private _httpClient: HttpClient) {}
 
+  public getOne(id: string): Observable<ProductModel> {
+    return this._httpClient.get<ProductModel>(
+      'https://fakestoreapi.com/products/' + id
+    );
+  }
+
   public getAll(): Observable<ProductModel[]> {
     return this._httpClient.get<ProductModel[]>(
       'https://fakestoreapi.com/products'

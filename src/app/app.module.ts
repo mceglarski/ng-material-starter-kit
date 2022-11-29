@@ -33,6 +33,7 @@ import { EmployeeService } from './services/employee.service';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterFormComponent } from './components/user/register-form/register-form.component';
 import { UserService } from './services/user.service';
+import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { UserService } from './services/user.service';
     EmployeeFormComponent,
     LoginComponent,
     RegisterFormComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,

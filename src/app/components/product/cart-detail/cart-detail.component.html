@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <mat-card *ngIf="cartDetails$ | async as detail">
+    <mat-card-header class="cart-detail-header">
+      <mat-card-title>Cart</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        You have {{ detail.products.length }} product{{detail.products.length > 1 ? "s" : ""}}
+        in the cart
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

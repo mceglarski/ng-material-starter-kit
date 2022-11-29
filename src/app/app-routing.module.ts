@@ -14,6 +14,7 @@ import { RegisterFormComponent } from './components/user/register-form/register-
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { CatFactComponent } from './components/cat/cat-fact/cat-fact.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
+import { CartDetailComponent } from './components/product/cart-detail/cart-detail.component';
 
 @NgModule({
   imports: [
@@ -73,6 +74,10 @@ import { AgePredictionComponent } from './components/age-prediction/age-predicti
       {
         path: 'age/:name',
         component: AgePredictionComponent,
+      },
+      {
+        path: 'cart/:id',
+        component: CartDetailComponent,
       },
     ]),
   ],

@@ -12,6 +12,7 @@ import { EmployeeFormComponent } from './components/employee/employee-form/emplo
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterFormComponent } from './components/user/register-form/register-form.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { CatFactComponent } from './components/cat/cat-fact/cat-fact.component';
 
 @NgModule({
   imports: [
@@ -63,6 +64,10 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
       {
         path: 'register',
         component: RegisterFormComponent,
+      },
+      {
+        path: 'cat-fact',
+        component: CatFactComponent,
       },
     ]),
   ],

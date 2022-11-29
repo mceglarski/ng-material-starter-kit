@@ -34,6 +34,8 @@ import { LoginComponent } from './components/user/login/login.component';
 import { RegisterFormComponent } from './components/user/register-form/register-form.component';
 import { UserService } from './services/user.service';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
+import { CatFactComponent } from './components/cat/cat-fact/cat-fact.component';
+import { CatFactService } from './services/cat-fact.service';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
     LoginComponent,
     RegisterFormComponent,
     ProductDetailComponent,
+    CatFactComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { ProductDetailComponent } from './components/product/product-detail/prod
     PublicHolidaysService,
     EmployeeService,
     UserService,
+    CatFactService,
   ],
   bootstrap: [AppComponent],
 })

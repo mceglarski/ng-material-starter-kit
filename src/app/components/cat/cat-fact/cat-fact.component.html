@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <mat-card>
+    <mat-card-header class="cat-fact-header">
+      <mat-card-title>Cat facts</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ (catFact$ | async)?.fact }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

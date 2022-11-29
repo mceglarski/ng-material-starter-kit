@@ -36,6 +36,8 @@ import { UserService } from './services/user.service';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { CatFactComponent } from './components/cat/cat-fact/cat-fact.component';
 import { CatFactService } from './services/cat-fact.service';
+import { AgePredictionService } from './services/age-prediction.service';
+import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import { CatFactService } from './services/cat-fact.service';
     RegisterFormComponent,
     ProductDetailComponent,
     CatFactComponent,
+    AgePredictionComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import { CatFactService } from './services/cat-fact.service';
     EmployeeService,
     UserService,
     CatFactService,
+    AgePredictionService,
   ],
   bootstrap: [AppComponent],
 })

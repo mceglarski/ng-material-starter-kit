@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <mat-card *ngIf="joke$ | async as joke">
+    <mat-card-header class="joke-header">
+      <mat-card-title (click)="consoling(joke)">😂 Joke 😂 </mat-card-title>
+      <mat-card-subtitle>{{ joke[0].type }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="joke-setup">{{ joke[0].setup }}</p>
+      . <br />
+      . <br />
+      . <br />
+      <p>{{ joke[0].punchline }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

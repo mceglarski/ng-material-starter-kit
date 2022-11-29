@@ -41,6 +41,8 @@ import { AgePredictionComponent } from './components/age-prediction/age-predicti
 import { CartDetailComponent } from './components/product/cart-detail/cart-detail.component';
 import { CartService } from './services/cart.service';
 import { UserDetailComponent } from './components/user/user-detail/user-detail.component';
+import { JokeComponent } from './components/joke/joke.component';
+import { JokeService } from './services/joke.service';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { UserDetailComponent } from './components/user/user-detail/user-detail.c
     AgePredictionComponent,
     CartDetailComponent,
     UserDetailComponent,
+    JokeComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ import { UserDetailComponent } from './components/user/user-detail/user-detail.c
     CatFactService,
     AgePredictionService,
     CartService,
+    JokeService,
   ],
   bootstrap: [AppComponent],
 })

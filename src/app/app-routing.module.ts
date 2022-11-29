@@ -16,6 +16,7 @@ import { CatFactComponent } from './components/cat/cat-fact/cat-fact.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { CartDetailComponent } from './components/product/cart-detail/cart-detail.component';
 import { UserDetailComponent } from './components/user/user-detail/user-detail.component';
+import { JokeComponent } from './components/joke/joke.component';
 
 @NgModule({
   imports: [
@@ -83,6 +84,10 @@ import { UserDetailComponent } from './components/user/user-detail/user-detail.c
       {
         path: 'user/:id',
         component: UserDetailComponent,
+      },
+      {
+        path: 'joke/:type',
+        component: JokeComponent,
       },
     ]),
   ],

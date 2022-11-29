@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <mat-card *ngIf="userDetail$ | async as detail">
+    <mat-card-header class="user-detail-header">
+      <mat-card-title>User details</mat-card-title>
+      <mat-card-subtitle>{{ detail.name.firstname }} {{ detail.name.lastname }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ detail.email }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

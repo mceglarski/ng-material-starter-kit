@@ -40,6 +40,7 @@ import { AgePredictionService } from './services/age-prediction.service';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { CartDetailComponent } from './components/product/cart-detail/cart-detail.component';
 import { CartService } from './services/cart.service';
+import { UserDetailComponent } from './components/user/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { CartService } from './services/cart.service';
     CatFactComponent,
     AgePredictionComponent,
     CartDetailComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,

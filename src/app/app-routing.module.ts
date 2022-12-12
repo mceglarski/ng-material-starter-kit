@@ -17,6 +17,8 @@ import { AgePredictionComponent } from './components/age-prediction/age-predicti
 import { CartDetailComponent } from './components/product/cart-detail/cart-detail.component';
 import { UserDetailComponent } from './components/user/user-detail/user-detail.component';
 import { JokeComponent } from './components/joke/joke.component';
+import {FilteredProductListComponent} from "./components/product/filtered-product-list/filtered-product-list.component";
+import {SortedProductListComponent} from "./components/product/sorted-product-list/sorted-product-list.component";
 
 @NgModule({
   imports: [
@@ -88,6 +90,14 @@ import { JokeComponent } from './components/joke/joke.component';
       {
         path: 'joke/:type',
         component: JokeComponent,
+      },
+      {
+        path: 'products/:category',
+        component: FilteredProductListComponent,
+      },
+      {
+        path: 'sorted-products',
+        component: SortedProductListComponent,
       },
     ]),
   ],

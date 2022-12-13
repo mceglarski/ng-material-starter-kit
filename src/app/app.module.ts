@@ -46,6 +46,7 @@ import { JokeService } from './services/joke.service';
 import { FilteredProductListComponent } from './components/product/filtered-product-list/filtered-product-list.component';
 import {FlexModule} from "@angular/flex-layout";
 import { SortedProductListComponent } from './components/product/sorted-product-list/sorted-product-list.component';
+import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { SortedProductListComponent } from './components/product/sorted-product-
     JokeComponent,
     FilteredProductListComponent,
     SortedProductListComponent,
+    EmployeeListComponent,
   ],
     imports: [
         BrowserModule,

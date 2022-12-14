@@ -18,7 +18,6 @@ export class ProductListComponent {
   private _refreshSubject: BehaviorSubject<void> = new BehaviorSubject<void>(
     void 0
   );
-  public list$: Observable<ProductModel[]> = this._productService.getAll();
   public refresh$: Observable<void> = this._refreshSubject.asObservable();
   public refreshedList$: Observable<ProductModel[]> = this.refresh$.pipe(
     switchMap((data) => this._productService.getAll())

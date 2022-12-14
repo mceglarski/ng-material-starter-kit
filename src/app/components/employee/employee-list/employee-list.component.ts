@@ -7,6 +7,7 @@ import {
   of,
   combineLatest,
   Subject,
+  switchMap,
 } from 'rxjs';
 import { EmployeeModelV2 } from '../../../models/employee.model';
 
@@ -28,9 +29,17 @@ export class EmployeeListComponent {
     'asc'
   );
   private _ageSubject: Subject<string> = new Subject<string>();
+  private _refreshSubject: BehaviorSubject<void> = new BehaviorSubject<void>(
+    void 0
+  );
+
+  public refresh$: Observable<void> = this._refreshSubject.asObservable();
   public order$: Observable<string> = this._orderSubject.asObservable();
   public age$: Observable<string> = this._ageSubject.asObservable();
 
+  public refreshedList$: Observable<EmployeeModelV2[]> = this.refresh$.pipe(
+    switchMap((data) => this._employeeService.getAll())
+  );
   public employeeList$: Observable<EmployeeModelV2[]> = combineLatest([
     this._employeeService.getAll(),
     this.order$,
@@ -77,7 +86,13 @@ export class EmployeeListComponent {
     ageEnum.AGE_RANGE_4,
     ageEnum.AGE_RANGE_5,
   ]);
-  public displayedColumns: string[] = ['id', 'firstName', 'age', 'height'];
+  public displayedColumns: string[] = [
+    'id',
+    'firstName',
+    'age',
+    'height',
+    'actions',
+  ];
 
   constructor(private _employeeService: EmployeeService) {}
 
@@ -87,5 +102,11 @@ export class EmployeeListComponent {
 
   public selectAge(age: string): void {
     this._ageSubject.next(age);
+  }
+
+  public deleteEmployee(id: number): void {
+    this._employeeService
+      .delete(id)
+      .subscribe(() => this._refreshSubject.next());
   }
 }

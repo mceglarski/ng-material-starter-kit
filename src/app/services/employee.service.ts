@@ -22,9 +22,7 @@ export class EmployeeService {
 
   public getAll(): Observable<EmployeeModelV2[]> {
     return this._httpClient
-      .get<ApiResponse<EmployeeModelV2[]>>(
-        'https://dummyjson.com/users'
-      )
+      .get<ApiResponse<EmployeeModelV2[]>>('https://dummyjson.com/users')
       .pipe(
         map((response: ApiResponse<EmployeeModelV2[]>) => {
           return response.users.map((employeeResponse: EmployeeModelV2) => {
@@ -37,5 +35,11 @@ export class EmployeeService {
           });
         })
       );
+  }
+
+  public delete(id: number): Observable<EmployeeModelV2> {
+    return this._httpClient.delete<EmployeeModelV2>(
+      'https://dummyjson.com/users/' + id
+    );
   }
 }

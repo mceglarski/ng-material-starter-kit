@@ -20,6 +20,7 @@ import { JokeComponent } from './components/joke/joke.component';
 import { FilteredProductListComponent } from './components/product/filtered-product-list/filtered-product-list.component';
 import { SortedProductListComponent } from './components/product/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
+import { BeerComponent } from './components/beer/beer.component';
 
 @NgModule({
   imports: [
@@ -103,6 +104,10 @@ import { EmployeeListComponent } from './components/employee/employee-list/emplo
       {
         path: 'employee-list',
         component: EmployeeListComponent,
+      },
+      {
+        path: 'beers-with-pagination',
+        component: BeerComponent,
       },
     ]),
   ],

@@ -44,9 +44,11 @@ import { UserDetailComponent } from './components/user/user-detail/user-detail.c
 import { JokeComponent } from './components/joke/joke.component';
 import { JokeService } from './services/joke.service';
 import { FilteredProductListComponent } from './components/product/filtered-product-list/filtered-product-list.component';
-import {FlexModule} from "@angular/flex-layout";
+import { FlexModule } from '@angular/flex-layout';
 import { SortedProductListComponent } from './components/product/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
+import { BeerComponent } from './components/beer/beer.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -71,25 +73,27 @@ import { EmployeeListComponent } from './components/employee/employee-list/emplo
     FilteredProductListComponent,
     SortedProductListComponent,
     EmployeeListComponent,
+    BeerComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatFormFieldModule,
-        HttpClientModule,
-        MatCardModule,
-        MatListModule,
-        MatChipsModule,
-        MatSelectModule,
-        MatCheckboxModule,
-        MatMenuModule,
-        MatButtonModule,
-        MatTableModule,
-        FlexModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatCardModule,
+    MatListModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatTableModule,
+    FlexModule,
+    MatPaginatorModule,
+  ],
   providers: [
     ProductsService,
     CategoriesService,

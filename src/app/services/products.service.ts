@@ -7,22 +7,21 @@ import { ProductModel } from '../models/product.model';
 export class ProductsService {
   constructor(private _httpClient: HttpClient) {}
 
+  private productsUrl: string = 'https://fakestoreapi.com/products/';
+
   public getOne(id: string): Observable<ProductModel> {
-    return this._httpClient.get<ProductModel>(
-      'https://fakestoreapi.com/products/' + id
-    );
+    return this._httpClient.get<ProductModel>(this.productsUrl + id);
   }
 
   public getAll(): Observable<ProductModel[]> {
-    return this._httpClient.get<ProductModel[]>(
-      'https://fakestoreapi.com/products'
-    );
+    return this._httpClient.get<ProductModel[]>(this.productsUrl);
   }
 
   public create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
-    return this._httpClient.post<ProductModel>(
-      'https://fakestoreapi.com/products',
-      product
-    );
+    return this._httpClient.post<ProductModel>(this.productsUrl, product);
+  }
+
+  public delete(id: number): Observable<ProductModel> {
+    return this._httpClient.delete<ProductModel>(this.productsUrl + id);
   }
 }

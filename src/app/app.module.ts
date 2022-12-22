@@ -51,6 +51,7 @@ import { BeerComponent } from './components/beer/beer.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { EmployeeGridListComponent } from './components/employee/employee-grid-list/employee-grid-list.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     EmployeeListComponent,
     BeerComponent,
     ProductGridListComponent,
+    EmployeeGridListComponent,
   ],
   imports: [
     BrowserModule,

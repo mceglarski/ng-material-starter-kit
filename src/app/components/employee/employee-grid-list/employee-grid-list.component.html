@@ -1,0 +1,19 @@
+<h2>I used https://dummyjson.com/users/ as the Employee list</h2>
+<mat-grid-list cols="2" rowHeight="1:2">
+  <mat-grid-tile>
+    <mat-list role="list">
+      <mat-list-item role="itemlist" *ngFor="let item of employeeList$ | async">
+        {{ item.firstName }}
+        <button mat-button color="primary" (click)="selectEmployee(item.id)">
+          Show details
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <ng-container *ngIf="employeeDetails$ | async as item">
+      Age: {{ item.age }}, height: {{ item.height }}
+    </ng-container>
+  </mat-grid-tile>
+</mat-grid-list>

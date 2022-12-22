@@ -22,6 +22,7 @@ import { SortedProductListComponent } from './components/product/sorted-product-
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { BeerComponent } from './components/beer/beer.component';
 import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
+import { EmployeeGridListComponent } from './components/employee/employee-grid-list/employee-grid-list.component';
 
 @NgModule({
   imports: [
@@ -113,6 +114,10 @@ import { ProductGridListComponent } from './components/product/product-grid-list
       {
         path: 'product-grid-list',
         component: ProductGridListComponent,
+      },
+      {
+        path: 'employees-master-details',
+        component: EmployeeGridListComponent,
       },
     ]),
   ],

@@ -37,6 +37,12 @@ export class EmployeeService {
       );
   }
 
+  public getOne(id: number): Observable<EmployeeModelV2> {
+    return this._httpClient.get<EmployeeModelV2>(
+      'https://dummyjson.com/users/' + id
+    );
+  }
+
   public delete(id: number): Observable<EmployeeModelV2> {
     return this._httpClient.delete<EmployeeModelV2>(
       'https://dummyjson.com/users/' + id

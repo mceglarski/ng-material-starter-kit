@@ -21,6 +21,7 @@ import { FilteredProductListComponent } from './components/product/filtered-prod
 import { SortedProductListComponent } from './components/product/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { BeerComponent } from './components/beer/beer.component';
+import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
 
 @NgModule({
   imports: [
@@ -108,6 +109,10 @@ import { BeerComponent } from './components/beer/beer.component';
       {
         path: 'beers-with-pagination',
         component: BeerComponent,
+      },
+      {
+        path: 'product-grid-list',
+        component: ProductGridListComponent,
       },
     ]),
   ],

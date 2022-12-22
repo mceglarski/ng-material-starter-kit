@@ -49,6 +49,8 @@ import { SortedProductListComponent } from './components/product/sorted-product-
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { BeerComponent } from './components/beer/beer.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     SortedProductListComponent,
     EmployeeListComponent,
     BeerComponent,
+    ProductGridListComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,6 +96,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     FlexModule,
     MatPaginatorModule,
+    MatGridListModule,
   ],
   providers: [
     ProductsService,

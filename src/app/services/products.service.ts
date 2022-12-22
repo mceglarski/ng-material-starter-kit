@@ -9,7 +9,7 @@ export class ProductsService {
 
   private productsUrl: string = 'https://fakestoreapi.com/products/';
 
-  public getOne(id: string): Observable<ProductModel> {
+  public getOne(id: number): Observable<ProductModel> {
     return this._httpClient.get<ProductModel>(this.productsUrl + id);
   }
 

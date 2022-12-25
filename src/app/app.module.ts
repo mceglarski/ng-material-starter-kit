@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { CategoriesListComponent } from './components/product/categories-list/categories-list.component';
 import { CategoriesService } from './services/categories.service';
 import { CryptoCurrenciesService } from './services/crypto-currencies.service';
-import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
+import { CryptoCurrenciesComponent } from './components/crypto/crypto-currencies/crypto-currencies.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
 import { PublicHolidaysService } from './services/public-holidays.service';
@@ -52,6 +52,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EmployeeGridListComponent } from './components/employee/employee-grid-list/employee-grid-list.component';
+import { CryptoGridListComponent } from './components/crypto/crypto-grid-list/crypto-grid-list.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { EmployeeGridListComponent } from './components/employee/employee-grid-l
     BeerComponent,
     ProductGridListComponent,
     EmployeeGridListComponent,
+    CryptoGridListComponent,
   ],
   imports: [
     BrowserModule,

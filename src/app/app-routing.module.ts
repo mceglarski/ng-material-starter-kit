@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { CategoriesListComponent } from './components/product/categories-list/categories-list.component';
-import { CryptoCurrenciesComponent } from './components/crypto-currencies/crypto-currencies.component';
+import { CryptoCurrenciesComponent } from './components/crypto/crypto-currencies/crypto-currencies.component';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
 import { CheckboxCategoriesComponent } from './components/product/checkbox-categories/checkbox-categories.component';
 import { CategoriesMenuComponent } from './components/product/categories-menu/categories-menu.component';
@@ -23,6 +23,7 @@ import { EmployeeListComponent } from './components/employee/employee-list/emplo
 import { BeerComponent } from './components/beer/beer.component';
 import { ProductGridListComponent } from './components/product/product-grid-list/product-grid-list.component';
 import { EmployeeGridListComponent } from './components/employee/employee-grid-list/employee-grid-list.component';
+import { CryptoGridListComponent } from './components/crypto/crypto-grid-list/crypto-grid-list.component';
 
 @NgModule({
   imports: [
@@ -118,6 +119,10 @@ import { EmployeeGridListComponent } from './components/employee/employee-grid-l
       {
         path: 'employees-master-details',
         component: EmployeeGridListComponent,
+      },
+      {
+        path: 'crypto-master-details',
+        component: CryptoGridListComponent,
       },
     ]),
   ],
